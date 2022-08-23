@@ -24,7 +24,7 @@ function UniversityDetails() {
        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
        {
-        data.map((item, i) => <p key={i}><a href={`${item?.web_pages[0]}`}>Here</a> is a link to the school's website.</p>)
+        data.map((item, i) => <p key={i} style={{textAlign: 'left'}}><a href={`${item?.web_pages[0]}`}>Here</a> is a link to the school's website.</p>)
        }
     </div>
   )
