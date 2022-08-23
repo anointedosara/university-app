@@ -6,7 +6,7 @@ function Countries() {
     const params = useParams()
 
     useEffect(() => {
-        fetch(`https://restcountries.com/v3.1/all`)
+        fetch(`https://restcountries.com/v3/all`)
           .then((data) => data.json())
           .then((data) => {
             console.log(data);

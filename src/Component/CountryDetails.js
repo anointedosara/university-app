@@ -6,7 +6,7 @@ function CountryDetails() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch(`http://universities.hipolabs.com/search?country=${params.details}`)
+        fetch(`http://universities.hipolabs.com/search?country=${params.country}`)
           .then((data) => data.json())
           .then((data) => {
             console.log(data);
@@ -17,8 +17,8 @@ function CountryDetails() {
   return (
     <div>
       <h1>{params.details}</h1>
-      <h1>Here is a list of all Universities in {params.details}</h1>
-      {data?.map((item, i) => <p key={i}><Link to={`/country/${params.details}/${item?.name}`}>{item?.name}</Link></p>)}
+      <h1>Here is a list of all Universities in {params.country}</h1>
+      {data?.map((item, i) => <p key={i}><Link to={`/country/${params.country}/${item?.name}`}>{item?.name}</Link></p>)}
     </div>
   )
 }

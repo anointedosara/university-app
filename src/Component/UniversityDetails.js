@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom';
 function UniversityDetails() {
     const params = useParams()
     const [data, setData] = useState([])
-    const dataa = params.details
+
 
     useEffect(() => {
-        fetch(`http://universities.hipolabs.com/search?country=${params.details}`)
+        fetch(`http://universities.hipolabs.com/search?name=${params.name}&country=${params.country}`)
           .then((data) => data.json())
           .then((data) => {
             console.log(data);
@@ -24,7 +24,7 @@ function UniversityDetails() {
        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
        {
-        data.map((item, i) => <p key={i}>{item.dataa.domains[0]}</p>)
+        data.map((item, i) => <p key={i}><a href={`${item?.web_pages[0]}`}>Here</a> is a link to the school's website.</p>)
        }
     </div>
   )
