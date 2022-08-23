@@ -20,6 +20,10 @@ code {
   align-items: flex-end;
   list-style: none;
   padding: 15px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: rgb(55, 44, 44);
 }
 
 .nav a {
@@ -35,7 +39,6 @@ code {
 
 .countries {
   padding: 15px;
-  text-align: left;
 }
 
 div {
