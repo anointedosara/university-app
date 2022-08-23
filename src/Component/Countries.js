@@ -16,7 +16,7 @@ function Countries() {
     }, [])
   return (
     <div className='countries'>
-      Here is a list of all countries to pick from.
+      <h1>Here is a list of all countries to pick from.</h1>
       {
         data.map((item, i) => <p key={i}><Link to={`/country/${item.name.common}`}>{item.name.common}</Link></p>)
       }
