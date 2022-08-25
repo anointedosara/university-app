@@ -9,11 +9,9 @@ function CountryDetails() {
         fetch(`http://universities.hipolabs.com/search?country=${params.country}`)
           .then((data) => data.json())
           .then((data) => {
-            console.log(data);
             setData(data);
           });
-          console.log(params)
-    }, [])
+    }, [params])
   return (
     <div>
       <h1>{params.details}</h1>

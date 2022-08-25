@@ -9,16 +9,17 @@ function Countries() {
         fetch(`https://restcountries.com/v3/all`)
           .then((data) => data.json())
           .then((data) => {
-            console.log(data);
             setData(data);
+            console.log(data);
           });
-          console.log(params)
-    }, [])
+    }, [params])
   return (
     <div className='countries'>
       <h1 style={{textAlign: 'center'}}>Here is a list of all countries to pick from.</h1>
       {
-        data.map((item, i) => <p key={i}><Link to={`/country/${item.name.common}`}>{item.name.common}</Link></p>)
+        data.map((item, i) => 
+            <p key={i}><Link to={`/country/${item.name.common}`}>{item.name.common}</Link></p>
+            )
       }
     </div>
   )
